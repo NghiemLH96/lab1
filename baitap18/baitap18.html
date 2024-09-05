@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap18.css">
+</head>
+
+<body>
+    <fieldset>
+        <form id="form" action="" onsubmit="calcu(event)">
+            <legend>Nhập 3 số nguyên</legend>
+            <label for="">Nhập số A:</label>
+            <input name="numA" type="number">
+            <br>
+            <label for="">Nhập số B:</label>
+            <input name="numB" type="number">
+            <br>
+            <label for="">Nhập số C:</label>
+            <input name="numC" type="number">
+            <br>
+            <button>Xác nhận</button>
+        </form>
+    </fieldset>
+
+    <fieldset id="result">
+        <label for="">Theo thứ tự:</label>
+        <div id="sortShow">
+            
+        </div>
+        <br>
+        <label for="">Tổng: <span id="sumResult"></span></label>
+        <br>
+        <label for="">Tích: <span id="sqrtResult"></span></label>
+    </fieldset>
+</body>
+<script>
+    function calcu(e){
+        e.preventDefault();
+        let numArr = [];
+        let sortInner = "";
+        const numA = document.getElementById("form").elements.namedItem("numA").value;
+        numArr.push(Number(numA));
+        const numB = document.getElementById("form").elements.namedItem("numB").value;
+        numArr.push(Number(numB));
+        const numC = document.getElementById("form").elements.namedItem("numC").value;
+        numArr.push(Number(numC));
+        numArr.sort()
+        sortInner += 
+        `
+            <span>1...${numArr[0]}</span><br>
+            <span>2...${numArr[1]}</span><br>
+            <span>3...${numArr[2]}</span>
+        `
+        document.getElementById("sortShow").innerHTML = sortInner;
+        const sumArr = numArr.reduce((total,num)=>{
+            return total+num
+        })
+        const sqrtArr = numArr.reduce((total,num)=>{
+            return total*num
+        })
+        document.getElementById("sumResult").innerHTML = `${sumArr}`;
+        document.getElementById("sqrtResult").innerHTML = `${sqrtArr}`;
+    }
+</script>
+</html>

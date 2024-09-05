@@ -1,0 +1,19 @@
+* {
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-decoration: underline;
+}
+.p__caption{
+    text-align: start;
+    font-weight: 700;
+}
+p{
+   text-align: center; 
+}

@@ -1,0 +1,18 @@
+*{
+    margin: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+    color: #006600;
+}
+font{
+    color: #FF0000;
+}
+pre{
+    padding: 0px 130px;
+    background-color: #CCCCCC;
+    color: #0000CC;
+}

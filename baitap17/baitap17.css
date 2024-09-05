@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    padding: 10px;
+}
+table{
+    border-collapse: collapse;
+    background-color: #fffbc3;
+    color: #3f7482;
+}
+caption{
+    color: #3f7482;
+    font-size: 25px;
+    font-weight: 900;
+    padding: 10px 0px;
+}
+tbody>tr>td{
+    padding: 2px;
+}
+fieldset{
+    padding: 10px;
+    margin: 2px 30px;
+    border-color: #5F1B17;
+}
+legend{
+    color: orange;
+}
+fieldset>input{
+    width: 60px;
+}
+tfoot{
+    color: orange;
+}

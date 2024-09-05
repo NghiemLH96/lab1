@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 2px;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+<body>
+    <h2>5.Table</h2>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">Table Header (thead)</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1 - part of tbody</td>
+                <td>Cell 2 - part of tbody</td>
+            </tr>
+            <tr>
+                <td>Cell 3 - part of tbody</td>
+                <td>Cell 4 - part of tbody</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">Table Footer (tfoot)</th> 
+            </tr>
+        </tfoot>
+    </table>
+    
+    <table style="border-width: 1px;border-collapse: collapse;" border="2" >
+        <caption>INVOICE</caption>
+        <thead>
+            <tr>
+                <th>Item/Desc</th>
+                <th>Qty</th>
+                <th>@</th>
+                <th>price</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>100</td>
+                <td>1.15</td>
+                <td>115.000</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>100</td>
+                <td>1.15</td>
+                <td>115.000</td>
+            </tr>
+            <tr>
+                <th colspan="3">Sub total</th>
+                <td>610.000</td>
+            </tr>
+            <tr>
+                <th colspan="2">Tax</th>
+                <td>7%</td>
+                <td>42</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">total</td>
+                <td>653.000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

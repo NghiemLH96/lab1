@@ -1,0 +1,24 @@
+*{
+    margin: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7NZj3aqdnRn1liboXaGOWoQv1ch2iu8nGlQ&s");
+    background-blend-mode:hard-light;
+    background-color: #dbdbdbe8;
+    background-size: 100px;
+}
+h2{
+    text-align: center;
+    color: #008888;
+}
+div>p:first-child{
+    color: #FFFFFF;
+    background-color: #339999;
+}
+div>p{
+    font-size: 20px;
+    color: #008888
+}

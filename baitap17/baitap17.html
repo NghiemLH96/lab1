@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap17.css">
+</head>
+<body>
+    <form action="" onsubmit="reroll(event)">
+        <table border="1">
+            <caption>Đăng ký du lịch</caption>
+            <tr>
+                <td>
+                    <label for="">
+                        Họ và tên
+                    </label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">
+                        Địa chỉ
+                    </label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">
+                        Điện thoại
+                    </label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Khách Việt Nam</label>
+                </td>
+                <td>
+                    <input name="" type="checkbox">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Nghề nghiệp</label>
+                </td>
+                <td>
+                    <select name="" id="">
+                        <optgroup label="Miền Bắc">
+                            <option value="">Hà nội - Hạ Long - Sapa</option>
+                            <option value="">Hà nội - Chùa Hương - Ninh Bình</option>
+                            <option value="">Hà nội - Cát Bà - Tuân Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                            <option value="">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="">Nha Trang - Đà lạt</option>
+                            <option value="">Buôn Mê Thuộc - Gia Lai - KonTum</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">
+                            <option value="">TpHCM - Cần Thơ - Cà Mau</option>
+                            <option value="">TpHCM - Mỹ Tho</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Phương tiện</label>
+                </td>
+                <td>
+                    <input name="vehicle" type="radio">
+                    <label for="">Máy bay</label>
+                    <input name="vehicle" type="radio">
+                    <label for="">Xe ô tô</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Số lượng đoàn khách</legend>
+                        <label for="">Người lớn</label>
+                        <input value="0" type="text">
+                        <label for="">Trẻ em</label>
+                        <input value="0" type="text">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Ghi chú thêm</label>
+                </td>
+                <td>
+                    <textarea name="" id=""></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button>Đồng ý</button>
+                </td>
+            </tr>
+            <tfoot id="resultShow">
+
+            </tfoot>
+        </table>
+    </form>
+</body>
+<script>
+    function reroll(e){
+        e.preventDefault();
+        let noteInner = "";
+        noteInner += 
+        `
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                    Bạn đã đăng ký thành công!!!
+                </td>
+            </tr>
+        `
+        document.getElementById("resultShow").innerHTML = noteInner;
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+table{
+    border-collapse: collapse;
+}
+caption{
+    color: #86502D;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 10px 0px;
+}
+tbody{
+    background-color: #CDEDFF;
+}
+td{
+    padding: 2px;
+}
+tfoot{
+    background-color: #CDEDFF;
+    text-align: center;
+}

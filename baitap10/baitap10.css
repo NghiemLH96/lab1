@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    margin: 8px;
+}
+h2{
+    text-align: center;
+    border: 4px double rgb(255, 136, 0);
+    color: rgb(255, 136, 0);
+    text-wrap:balance;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+p{
+    margin: 20px 0px;
+}
+p::first-letter{
+    color: brown;
+    font-size: 40px;
+    font-weight: 700;
+}
+.title{
+    color: #FFFFFF;
+    background-color: rgb(255, 136, 0);
+    text-align: end;
+    font-size: 20px;
+}
+font{
+    color: brown;
+    font-weight: 700;
+}
+i{
+    background-color: rgb(255, 136, 0);
+}

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+
+    margin: 20px 30px;
+}
+h2{
+    text-align: center;
+    color: palevioletred;
+}
+span{
+    color: #FFFFFF;
+    background-color: palevioletred;
+}
+ol,hr{
+    margin: 20px 0px;
+}
+ol>li:nth-child(1)>ul{
+    list-style-type: square;
+}
+ol>li:nth-child(2)>ul{
+    list-style-type: circle;
+}
+p{
+    background-color: rgb(222, 183, 222);
+}

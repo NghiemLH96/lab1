@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap22.css">
+</head>
+
+<body>
+    <form id="form" action="" onsubmit="submitForm(event)">
+        <h2>Khảo sát ý kiến về việc học Online và kiểm tra online của sinh viên CNTT</h2>
+        <p>Hi Long, When you submit this form, the owner will see your name and email address
+            <br>
+            <sup>*</sup>Require
+        </p>
+        <ol>
+            <li id="quesId1">
+                <label for="">Mã sinh viên<sup>*</sup></label><br>
+                <input name="ques1" class="inputAns" type="text" placeholder="Enter your answer">
+                <label class="errorLabel" id="err1"></label>
+            </li>
+            <li id="quesId2">
+                <label for="">Họ và tên<sup>*</sup></label><br>
+                <input name="ques2" class="inputAns" type="text" placeholder="Enter your answer">
+                <label class="errorLabel" id="err2"></label>
+            </li>
+            <li id="quesId3">
+                <label for="">Khoá học(K16,K17,K18,K19)<sup>*</sup></label><br>
+                <input name="ques3" class="inputAns" type="text" placeholder="Enter your answer">
+                <label class="errorLabel" id="err3"></label>
+            </li>
+            <li id="quesId4">
+                <label for="">GV cung cấp tài liệu phục vụ môn học(sách tham khảo, slide, bài tập, bài kiểm
+                    tra,...)<sup>*</sup></label><br>
+                <input class="radioBox" name="ques4" type="radio" value="1"><label for="">Tốt</label><br>
+                <input class="radioBox" name="ques4" type="radio" value="2"><label for="">Bình thường</label><br>
+                <input class="radioBox" name="ques4" type="radio" value="3"><label for="">Chưa tốt</label><br>
+                <input class="radioBox" name="ques4" type="radio" value="4"><input name="ques4a" class="radioInput" type="text"
+                    placeholder="Other">
+                <label class="errorLabel" id="err4"></label>
+            </li>
+            <li id="quesId5">
+                <label for="">Khả năng sử dụng các công cụ giảng dạy của GV<sup>*</sup></label><br>
+                <input class="radioBox" name="ques5" type="radio" value="1"><label for="">Tốt</label><br>
+                <input class="radioBox" name="ques5" type="radio" value="2"><label for="">Bình thường</label><br>
+                <input class="radioBox" name="ques5" type="radio" value="3"><label for="">Chưa tốt</label><br>
+                <input class="radioBox" name="ques5" type="radio" value="4"><input name="ques5a" class="radioInput" type="text"
+                    placeholder="Other">
+                <label class="errorLabel" id="err5"></label>
+            </li>
+            <li id="quesId6">
+                <label for="">Nhận định chung về chất lượng giảng dạy của các môn học<sup>*</sup></label><br>
+                <input class="radioBox" name="ques6" type="radio" value="1"><label for="">Tốt</label><br>
+                <input class="radioBox" name="ques6" type="radio" value="2"><label for="">Bình thường</label><br>
+                <input class="radioBox" name="ques6" type="radio" value="3"><label for="">Chưa tốt</label><br>
+                <input class="radioBox" name="ques6" type="radio" value="4"><input name="ques6a" class="radioInput" type="text"
+                    placeholder="Other">
+                <label class="errorLabel" id="err6"></label>
+            </li>
+            <li id="quesId7">
+                <label for="">Việc sử dụng công cụ học tập online (iStudy, Microsoft Team) hiện tại của
+                    bạn<sup>*</sup></label><br>
+                <input class="radioBox" name="ques7" type="radio" value="1"><label for="">Tốt</label><br>
+                <input class="radioBox" name="ques7" type="radio" value="2"><label for="">Bình thường</label><br>
+                <input class="radioBox" name="ques7" type="radio" value="3"><label for="">Chưa tốt</label><br>
+                <input class="radioBox" name="ques7" type="radio" value="4"><input name="ques7a" class="radioInput" type="text"
+                    placeholder="Other">
+                <label class="errorLabel" id="err7"></label>
+            </li>
+            <li id="quesId8">
+                <label for="">Những khó khăn chính trong việc học tập online của bạn</label><br>
+                <textarea placeholder="Enter your answer" name="ques8" id=""></textarea>
+            </li>
+            <li id="quesId9">
+                <label for="">Theo bạn hình thức thi giữ kì nên là<sup>*</sup></label><br>
+                <input class="radioBox" name="ques9" type="radio" value="1"><label for="">Trắc nghiệm</label><br>
+                <input class="radioBox" name="ques9" type="radio" value="2"><label for="">Tự luận</label><br>
+                <input class="radioBox" name="ques9" type="radio" value="3"><label for="">Có cả hình thức trắc nghiệm và tự luận</label><br>
+                <input class="radioBox" name="ques9" type="radio" value="4"><label for="">Đồ án</label><br>
+                <input class="radioBox" name="ques9" type="radio" value="5"><label for="">Vấn đáp</label><br>
+                <input class="radioBox" name="ques9" type="radio" value="6"><input name="ques9a" class="radioInput" type="text"
+                    placeholder="Other">
+                <label class="errorLabel" id="err9"></label>
+            </li>
+            <li id="quesId10">
+                <label for="">Ý kiên đóng góp và phản hồi khác của bạn</label><br>
+                <textarea placeholder="Enter your answer" name="ques10" id=""></textarea>
+            </li>
+        </ol>
+        <button>Submit</button>
+    </form>
+</body>
+<script src="./baitap22.js"></script>
+</html>

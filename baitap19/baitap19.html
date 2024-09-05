@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap19.css">
+</head>
+
+<body>
+    <fieldset>
+        <form id="form" action="" onsubmit="calcu(event)">
+            <legend>Nhập 2 số nguyên</legend>
+            <label for="">Nhập số A:</label>
+            <input name="numA" type="number">
+            <br>
+            <label for="">Nhập số B:</label>
+            <input name="numB" type="number">
+            <br>
+            <button>Xác nhận</button>
+        </form>
+    </fieldset>
+
+    <fieldset id="result">
+        <label for="">Tổng: <span id="sumResult"></span></label>
+        <br>
+        <label for="">Tích: <span id="sqrtResult"></span></label>
+        <br>
+        <label for="">Hiệu: <span id="redResult"></span></label>
+        <br>
+        <label for="">Thương: <span id="divResult"></span></label>
+        <br>
+    </fieldset>
+</body>
+<script>
+    function calcu(e){
+        e.preventDefault();
+        let numArr = [];
+        const numA = document.getElementById("form").elements.namedItem("numA").value;
+        numArr.push(Number(numA));
+        const numB = document.getElementById("form").elements.namedItem("numB").value;
+        numArr.push(Number(numB));
+        const sumArr = numArr.reduce((total,num)=>{
+            return total+num
+        })
+        const sqrtArr = numArr.reduce((total,num)=>{
+            return total*num
+        })
+        const redArr = numArr.reduce((total,num)=>{
+            return total-num
+        })
+        let divArr;
+        if (numArr[0]%numArr[1]!=0) {
+            divArr = 'Không chia hết'
+        }else{
+            divArr = numArr.reduce((total,num)=>{
+            return total/num
+        })
+        }
+        
+        document.getElementById("sumResult").innerHTML = `${sumArr}`;
+        document.getElementById("sqrtResult").innerHTML = `${sqrtArr}`;
+        document.getElementById("redResult").innerHTML = `${redArr}`;
+        document.getElementById("divResult").innerHTML = `${divArr}`;
+    }
+</script>
+</html>

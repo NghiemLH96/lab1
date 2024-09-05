@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    margin: 20px;
+}
+table{
+    border-collapse: collapse;
+}
+.pic{
+    width: 100px;
+}
+tbody>tr>td{
+    padding: 10px 30px;
+    text-align:justify;
+}
+tbody>tr>td>ul{
+    list-style-type:square;
+    font-size: 18px;
+}
+.subTitle{
+    text-align: end;
+    color: #FFFFFF;
+    background-color: #FF0000;
+}
+.title{
+    background-color: #FFBBBB;
+    text-align: center;
+    font-size: 22px;
+    color: #FF0000;
+}
+
+tbody>tr>td>ul>li>ul{
+    list-style-type:disc;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+tbody>tr>td>ul>li>ol{
+    font-size: 18px;
+    padding: 10px 20px;
+}

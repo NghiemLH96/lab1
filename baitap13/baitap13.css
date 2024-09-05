@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    text-align: center;
+    color: #CC0133;
+    margin: 10px 0px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-color: orange;
+}
+thead{
+    background-color: #CC0133;
+    color: #FFFFFF;
+}
+td{
+    text-align: center;
+    
+}
+.subj{
+    text-align: start;
+}

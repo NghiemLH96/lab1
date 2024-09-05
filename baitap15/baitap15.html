@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap15.css">
+</head>
+<body>
+    <form action="" onsubmit="login(event)">
+        <table border="1">
+            <caption>Đăng nhập</caption>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="">Mã người dùng</label>
+                    </td>
+                    <td>
+                        <input id="id" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Mật khẩu</label>
+                    </td>
+                    <td>
+                        <input type="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;" colspan="2">
+                        <button>Đồng ý</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot id="showAcc">
+                
+            </tfoot>
+        </table>
+    </form>
+</body>
+<script>
+    function login(e){
+        e.preventDefault();
+        const acc = document.getElementById("id").value
+        let accountInner = "";
+        if (acc) {
+            accountInner += `
+                <tr>
+                    <td colspan="2">${acc}</td>
+                </tr>
+        `
+        }else{
+            accountInner += `
+                <tr>
+                    <td colspan="2">NULL</td>
+                </tr>
+        `
+        }
+        document.getElementById("showAcc").innerHTML = accountInner;
+    }
+</script>
+</html>

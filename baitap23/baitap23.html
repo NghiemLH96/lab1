@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap23.css">
+</head>
+
+<body>
+    <form id="form" action="" onsubmit="formSubmit(event)">
+        <section class="surveyBox">
+            <h2>Đăng ký học bằng lái xe A1</h2>
+            <ol>
+                <li>
+                    Thời gian học lý thuyết 18:00 Ngày 15/03/2022 tại phòng 2.1 cơ sở 215 Điện Biên Phủ, Phường 15, Quận
+                    Bình Thạnh
+                </li>
+                <li>
+                    Thời gian thi: Dự kiến cuối tháng 03/2022. <br> tại Trung tâm sát hạch lái xe Tân Bình, số 66 Phổ
+                    Quang,
+                    phường 2, quận Tân Bình, tp. Hồ Chí Minh.
+                </li>
+                <li>
+                    Thời gian làm hồ sơ:
+                    <ul>
+                        <li>Ngày 12/03/2022 tại Phòng 16.7 cơ sở 215 Điện Biên Phủ, Phường 15, Quận Bình Thạnh. </li>
+                        <li>Sáng từ 8g00 đến 12g00</li>
+                        <li>Chiều từ 13g00 đến 17g00</li>
+                    </ul>
+                    Làm hồ sơ bạn cần chuẩn bị:
+                    <ul>
+                        <li>4 tấm hình chân dung 3x4</li>
+                        <li>1 bản phô tô CMND/Hộ chiếu (không cần công chứng)</li>
+                        <li>Lệ phí 600.000đ/sinh viên (Bao gồm phí ôn tập, tài liệu, làm hồ sơ, khám sức khoẻ và lệ phí
+                            thi).</li>
+                    </ul>
+                </li>
+                <li>
+                    Mọi thắc mắc xin vui lòng liên hệ:Đ/c Lê Công Phụng, UV BCH Đoàn Trường, SĐT: 091.440.5421.
+                </li>
+            </ol>
+            <hr>
+            <p><sup>*</sup>Required</p>
+        </section>
+        <section id="surveyBox1" class="surveyBox">
+            <label for="">HỌ VÀ TÊN</label><sup>*</sup><br>
+            <input name="ques1" class="answerInp" type="text" placeholder="Your answer">
+            <p id="err1" class="errMsg"></p>
+        </section>
+        <section id="surveyBox2" class="surveyBox">
+            <label for="">MÃ SỐ SINH VIÊN (không phải sinh viên HIU hãy ghi 123)</label><sup>*</sup><br>
+            <input name="ques2" class="answerInp" type="text" placeholder="Your answer">
+            <p id="err2" class="errMsg"></p>
+        </section>
+        <section id="surveyBox3" class="surveyBox">
+            <label for="">KHOA/VIỆN</label><sup>*</sup><br>
+            <input name="ques3" class="answerInp" type="text" placeholder="Your answer">
+            <p id="err3" class="errMsg"></p>
+        </section>
+        <section id="surveyBox4" class="surveyBox">
+            <label for="">SỐ ĐIỆN THOẠI (có sử dụng zalo)</label><sup>*</sup><br>
+            <input name="ques4" class="answerInp" type="text" placeholder="Your answer">
+            <p id="err4" class="errMsg"></p>
+        </section>
+        <section id="surveyBox5" class="surveyBox">
+            <label for="">Mail cá nhân (thường xuyên sử dụng)</label><sup>*</sup><br>
+            <input name="ques5" class="answerInp" type="text" placeholder="Your answer">
+            <p id="err5" class="errMsg"></p>
+        </section>
+        <section id="surveyBox6" class="surveyBox">
+            <label for="">BẠN CÓ NHU CẦU HỌC BẰNG LÁI XE HẠNG B2 (xe ô tô hạng 9 chỗ trở xuống)?</label><sup>*</sup><br>
+            <div class="radioBox">
+                <input name="ques6" class="radioInp" type="radio" value="1"> <label for="">Có</label><br>
+                <input name="ques6" class="radioInp" type="radio" value="2"> <label for="">Không</label>
+            </div>
+            <p id="err6" class="errMsg"></p>
+        </section>
+        <section id="surveyBox7" class="surveyBox">
+            <label for="">MÌNH SẼ LÀM HỒ SƠ TẠI ?</label><sup>*</sup><br>
+            <div class="radioBox">
+                <input name="ques7" class="radioInp" type="radio" value="1"> <label for="">NGÀY 12/03/2022 PHÒNG 16.7 LẦU 16 CƠ SỞ 215 ĐIỆN BIÊN PHỦ</label><br>
+                <input name="ques7" class="radioInp" type="radio" value="2"> <label for="">HẸN NGÀY KHÁC BTC SẼ LIÊN HỆ LẠI</label>
+            </div>
+            <p id="err7" class="errMsg"></p>
+        </section>
+        <section class="btnBox">
+            <button class="submitBtn" type="submit">Submit</button>
+            <button class="clearBtn" type="button" onclick="clearForm()">Clear form</button>
+        </section>
+    </form>
+</body>
+<script>
+    function formSubmit(e){
+        e.preventDefault();
+        const ans1 = e.target.ques1.value;
+        const ans2 = e.target.ques2.value;
+        const ans3 = e.target.ques3.value;
+        const ans4 = e.target.ques4.value;
+        const ans5 = e.target.ques5.value;
+        const ans6 = e.target.ques6.value;
+        const ans7 = e.target.ques7.value;
+        const emptErr = "This field is required"
+        if (!ans1) {
+            document.getElementById("err1").innerHTML = emptErr;
+            document.getElementById("surveyBox1").classList.add("error");
+        }else{
+            document.getElementById("err1").innerHTML = ``;
+            document.getElementById("surveyBox1").classList.remove("error");
+        }
+        if (!ans2) {
+            document.getElementById("err2").innerHTML = emptErr;
+            document.getElementById("surveyBox2").classList.add("error");
+        }else{
+            document.getElementById("err2").innerHTML = ``;
+            document.getElementById("surveyBox2").classList.remove("error");
+        }
+        if (!ans3) {
+            document.getElementById("err3").innerHTML = emptErr;
+            document.getElementById("surveyBox3").classList.add("error");
+        }else{
+            document.getElementById("err3").innerHTML = ``;
+            document.getElementById("surveyBox3").classList.remove("error");
+        }
+        if (!ans4) {
+            document.getElementById("err4").innerHTML = emptErr;
+            document.getElementById("surveyBox4").classList.add("error");
+        }else{
+            document.getElementById("err4").innerHTML = ``;
+            document.getElementById("surveyBox4").classList.remove("error");
+        }
+        if (!ans5) {
+            document.getElementById("err5").innerHTML = emptErr;
+            document.getElementById("surveyBox5").classList.add("error");
+        }else{
+            document.getElementById("err5").innerHTML = ``;
+            document.getElementById("surveyBox5").classList.remove("error");
+        }
+        if (!ans6) {
+            document.getElementById("err6").innerHTML = emptErr;
+            document.getElementById("surveyBox6").classList.add("error");
+        }else{
+            document.getElementById("err6").innerHTML = ``;
+            document.getElementById("surveyBox6").classList.remove("error");
+        }
+        if (!ans7) {
+            document.getElementById("err7").innerHTML = emptErr;
+            document.getElementById("surveyBox7").classList.add("error");
+        }else{
+            document.getElementById("err7").innerHTML = ``;
+            document.getElementById("surveyBox7").classList.remove("error");
+        }
+        if (!ans1 || !ans2 || !ans3 || !ans4 || !ans5 || !ans6　|| !ans7) {
+            return
+        }
+        alert("Gửi báo cáo thành công");
+        clearForm();
+    }
+
+    function clearForm(){
+        const answerInpEl = document.querySelectorAll(".answerInp")
+        const radioInpEl = document.querySelectorAll(".radioInp")
+        const surveyBox = document.querySelectorAll(".surveyBox")
+        const errMsgs = document.querySelectorAll(".errMsg")
+        
+        answerInpEl.forEach(answer => answer.value = "")
+        radioInpEl.forEach(radio => radio.checked = false);
+        surveyBox.forEach(el => el.classList.remove("error"))
+        errMsgs.forEach(el => el.innerHTML = "")
+        
+    }
+</script>
+</html>

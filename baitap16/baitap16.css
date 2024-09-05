@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    padding: 10px;
+}
+table{
+    width: 400px;
+    border-collapse: collapse;
+    background-color: #E0F9D9;
+    color: #3a4e26;
+}
+caption{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 0px;
+}
+tbody>tr>td{
+    padding: 2px;
+}
+tfoot{
+    color: #B35670;
+}
+input,select{
+    padding: 2px;
+    outline: none;
+}

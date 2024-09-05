@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #F0EBF8;
+    border-top: 10px solid #6740B4;
+}
+ol{
+    line-height: 25px;
+    padding: 10px 30px;
+}
+p{
+    color: red;
+    padding: 10px 0px;
+}
+.surveyBox{
+    width: 90%;
+    padding: 20px 30px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+h2{
+    padding: 10px 0px;
+}
+sup{
+    color: red;
+}
+.surveyBox>label{
+    font-size: 18px;
+}
+.answerInp{
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid #CDCDCD;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    outline: none;
+}
+.answerInp::placeholder{
+    font-size: 15px;
+}
+.radioBox{
+    margin: 20px 0px;
+}
+.radioInp{
+    margin: 10px 0px;
+}
+.btnBox{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.submitBtn{
+    width: 100px;
+    height: 40px;
+    background-color: #6740B4;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.clearBtn{
+    color: #6740B4;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.error>input{
+    border: 1px solid red;
+}

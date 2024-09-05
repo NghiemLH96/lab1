@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./baitap21.css">
+</head>
+<body>
+    <form id="form" action="" onsubmit="calcu(event)">
+        <fieldset>
+            <legend>Nhập vào 1 số nguyên dương</legend>
+            <input name="numb" min="0" type="number"><br>
+            <div id="resultArea">
+
+            </div>
+            <button>Tính giai thừa</button>
+        </fieldset>
+    </form>
+</body>
+<script>
+    function calcu(e){
+        e.preventDefault();
+        let resultInner = "";
+        let calcuInner = "";
+        const inputNum = document.getElementById("form").numb.value
+        let result = factorial(Number(inputNum))
+        for (let i = Number(inputNum); i != 0; i--) {
+            calcuInner += `${i}`
+            if (i == 1) {
+                break;
+            }
+            calcuInner += `*`
+        }
+        resultInner += 
+        `
+            Giai thừa :
+            ${calcuInner} = ${result}
+        `
+        document.getElementById("resultArea").innerHTML = resultInner
+    }
+    
+    function factorial(a){
+        if (a <= 1) {
+            return 1
+        }else{
+            return a* factorial(a-1)
+        }
+    }
+</script>
+</html>

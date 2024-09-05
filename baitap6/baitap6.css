@@ -1,0 +1,52 @@
+* {
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+}
+h1{
+    text-align: center;
+    color: #006600;
+}
+h2{
+    text-decoration: underline;
+    color: #0000FF;
+}
+.p__caption{
+    font-weight: 700;
+}
+.poem__title{
+    text-align: center;
+    text-decoration: none;
+    color: #FF3399;
+    background-color: #FECFFD;
+}
+.poem__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    background-color: #FFFFCC;
+    
+}
+.poem__content>p{
+    text-align: center;
+}
+.poem__content>.p1{
+    color: #0000FF;
+}
+.poem__content>.p2{
+    color: #b35b18;
+}
+.poem__content>.p3{
+    color: #006600;
+}
+hr{
+    
+    width: 300px;
+}
